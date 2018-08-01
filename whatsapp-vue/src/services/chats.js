@@ -20,6 +20,7 @@ export default {
     });
   },
   getChat(id) {
+    console.log(id)
     return Promise.resolve({
       chat:
         {

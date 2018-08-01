@@ -2,7 +2,7 @@
   <div class="detail-chat">
     <div class="header">
         <img :src="chat.ProfileImage">
-        <h5>{{chat.NameContact}}</h5>
+        <h5>{{chat.NameContact}} {{chat.chatId}}</h5>
         <span>{{chat.LastDatetime}}</span>
         <ul>
             <li><a href="" target="_blank">call</a></li>
@@ -26,11 +26,11 @@ export default {
       chat: {},
     }
   },
-  props: {
-    id: Number,
-  },
+  props: ['chatId'],
   mounted() {
-        this.getChat(1);
+    console.log(this.$route)
+    var a = this.$route.params.id;
+        this.getChat(a);
   },
   methods: {
 	  getChat(chatId) {

@@ -22,7 +22,7 @@ export default new Router({
       ],
     },
     {
-      path: 'detail-chat',
+      path: 'detail-chat/:id',
       name: 'detailChat',
       component: DetailChat,
     },
